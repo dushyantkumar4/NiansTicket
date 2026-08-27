@@ -1,6 +1,12 @@
 import axios from 'axios'
 
-export const api = axios.create({ baseURL: import.meta.env.VITE_API_URL || '/api' })
+// During local development, always use Vite's same-origin proxy. This avoids
+// browser CORS preflight failures caused by backend CLIENT_URL differences.
+const configuredApiUrl = import.meta.env.VITE_API_URL || '/api'
+const apiBaseUrl = import.meta.env.DEV && /^https?:\/\/localhost:\d+\/api\/?$/i.test(configuredApiUrl)
+  ? '/api'
+  : configuredApiUrl
+export const api = axios.create({ baseURL: apiBaseUrl })
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('helpdesk_token')
   if (token) config.headers.Authorization = `Bearer ${token}`
