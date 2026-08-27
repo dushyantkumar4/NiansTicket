@@ -172,42 +172,11 @@ PATCH /api/tickets/:id/status
 
 Protected endpoints require valid JWT authentication and enforce the appropriate user role.
 
-## Backend Testing
-
-All backend REST API endpoints were tested independently during development, including authentication, authorization, ticket operations, status updates, filtering, pagination, and other implemented API functionality.
-
 ## Live Demo
 
-**Frontend:** `<live-frontend-url>`
+**Frontend:** `[<live-frontend-url>](https://nians-ticket-jysk5fgld-dushyant-s-projects-72a65b0b.vercel.app/login)`
 
-**Backend API:** `<live-backend-url>`
+**Backend API:** `[<live-backend-url>](https://niansticket.onrender.com)`
 
-## GitHub Repository
 
-**Repository:** `<github-repository-url>`
 
-## Assessment Coverage
-
-| Requirement                | Status  |
-| -------------------------- | ------- |
-| REST API                   | ✅       |
-| JWT authentication         | ✅       |
-| Customer/Admin RBAC        | ✅       |
-| Manual signup/login        | ✅       |
-| Google authentication      | ✅ Clerk |
-| User & Ticket models       | ✅       |
-| Ticket status workflow     | ✅       |
-| Status history             | ✅       |
-| File attachments           | ✅       |
-| File validation            | ✅       |
-| Search/filter/pagination   | ✅       |
-| Customer ticket management | ✅       |
-| Admin ticket management    | ✅       |
-| Admin analytics            | ✅       |
-| Loading/error/empty states | ✅       |
-
-## Notes
-
-Google authentication is implemented using Clerk, while the application's protected backend APIs use JWT-based authorization and role-based access control.
-
-This project was developed as part of a MERN Stack Developer technical assessment.
