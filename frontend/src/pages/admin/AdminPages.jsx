@@ -16,11 +16,16 @@ import { TicketDetail } from "../customer/CustomerPages";
 const heading = "text-2xl font-bold tracking-tight";
 const normalizeAnalytics = (data) => {
   const x = data?.data || data || {};
+  const byStatus = x.byStatus || [];
+  const open = byStatus.find((item) => item._id === "Open")?.count || 0;
+  const inProgress =
+    byStatus.find((item) => item._id === "In Progress")?.count || 0;
+  const resolved = byStatus.find((item) => item._id === "Resolved")?.count || 0;
   return {
-    total: x.total || x.totalTickets || 0,
-    open: x.open || 0,
-    inProgress: x.inProgress || x.in_progress || 0,
-    resolved: x.resolved || 0,
+    total: x.total || 0,
+    open,
+    inProgress,
+    resolved,
   };
 };
 export function AdminDashboard() {
@@ -84,14 +89,10 @@ export function AdminDashboard() {
               <h2 className="font-semibold">Tickets by status</h2>
             </div>
             <div className="mt-4 h-72">
-              <ResponsiveContainer>
+              <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chart}>
                   <Tooltip />
-                  <Bar dataKey="value" radius={[6, 6, 0, 0]}>
-                    {chart.map((x) => (
-                      <Cell key={x.name} fill={x.color} />
-                    ))}
-                  </Bar>
+                  <Bar dataKey="value" fill="#3b82f6" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>

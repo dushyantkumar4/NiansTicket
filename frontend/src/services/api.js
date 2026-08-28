@@ -25,4 +25,4 @@ export const ticketService = {
   create: (data) => api.post("/tickets", data),
   updateStatus: (id, status) => api.patch(`/tickets/${id}/status`, { status }),
 };
-export const analyticsService = { get: () => api.get("/analytics") };
+export const analyticsService = { get: () => api.get("/tickets/analytics") };
