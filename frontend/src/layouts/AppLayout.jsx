@@ -53,7 +53,9 @@ export function AppLayout() {
             {user?.role || "customer"}
           </span>
         </div>
-        <button className="nav-link w-full" onClick={logout}>Log out</button>
+        <button className="nav-link w-full" onClick={logout}>
+          Log out
+        </button>
       </div>
     </>
   );
