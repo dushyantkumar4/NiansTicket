@@ -6,48 +6,48 @@ A full-stack MERN support ticket management system with customer and admin roles
 
 **Frontend**
 
-* React + Vite
-* React Router
-* Axios
-* Clerk
-* Recharts
+- React + Vite
+- React Router
+- Axios
+- Clerk
+- Recharts
 
 **Backend**
 
-* Node.js
-* Express.js
-* MongoDB + Mongoose
-* JWT
-* bcryptjs
-* Multer
+- Node.js
+- Express.js
+- MongoDB + Mongoose
+- JWT
+- bcryptjs
+- Multer
 
 ## Features
 
 ### Authentication & Authorization
 
-* Manual email/password signup and login
-* Google sign-in using Clerk
-* JWT-based authorization for protected backend APIs
-* Customer and Admin roles
-* Role-based authorization enforced on backend APIs
-* Protected frontend routes
+- Manual email/password signup and login
+- Google sign-in using Clerk
+- JWT-based authorization for protected backend APIs
+- Customer and Admin roles
+- Role-based authorization enforced on backend APIs
+- Protected frontend routes
 
 ### Customer
 
-* Create support tickets
-* Upload ticket attachments
-* View own tickets
-* Track ticket status
-* View ticket status history
+- Create support tickets
+- Upload ticket attachments
+- View own tickets
+- Track ticket status
+- View ticket status history
 
 ### Admin
 
-* View all support tickets
-* Search tickets
-* Filter tickets by status and priority
-* Paginate ticket results
-* Update ticket status
-* View ticket analytics
+- View all support tickets
+- Search tickets
+- Filter tickets by status and priority
+- Paginate ticket results
+- Update ticket status
+- View ticket analytics
 
 ### Ticket Workflow
 
@@ -174,9 +174,6 @@ Protected endpoints require valid JWT authentication and enforce the appropriate
 
 ## Live Demo
 
-**Frontend:** `[<live-frontend-url>](https://nians-ticket-jysk5fgld-dushyant-s-projects-72a65b0b.vercel.app/login)`
+**Frontend:** `[<live-frontend-url>](https://nians-ticket.vercel.app)`
 
 **Backend API:** `[<live-backend-url>](https://niansticket.onrender.com)`
-
-
-
